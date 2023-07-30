@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="header-logo-img">
+          <a href="./index.html">
+            <img src="./images/haedermain.svg" alt="a log">
+          </a>
+          <a class="h-res-7logo" href="./index.html">
+            <img src="./images/res-logo-768.svg" alt="a log">
+          </a>
+        </div>
+        <nav class="header-navbar">
+          <a href="./category.html" class="header__catalog__btn">
+            <img src="./images/headermenu.svg" alt="an img">
+            <p>Каталог</p>
+          </a>
+          <form id="headerform" action="#">
+            <input type="search" name="q" placeholder="Найти товар">
+            <img src="/images/navsearch.svg" alt="a search">
+          </form>
+          <ul class="header-links__list">
+            <li class="header-links__items">
+              <img src="/images/header-linksimg2.svg" alt="an img">
+              <a href="./favorites.html" class="header-links">Избранное</a>
+            </li>
+            <li class="header-links__items">
+              <img src="/images/header-linksimg1.svg" alt="an img">
+              <a href="./goods.html" class="header-links">продукты</a>
+            </li>
+            <li class="header-links__items">
+              <div class="header-shopping">
+                <img src="/images/shopping-cart.svg" alt="an img">
+                <img class="header-shopping__number" src="/images/shoppingnum.svg" alt="an img">
+                <a href="./korzinka.html" class="header-links">Корзина</a>
+
+              </div>
+            </li>
+          </ul>
+          <div class="header-person">
+            <img class="header-person__mainimg" src="/images/personavater.png" alt="">
+            <p class="header-person__name">Алексей</p>
+            <div class="header-person__dropdown">
+              <img src="/images/chevron-down.svg" alt="an img">
+
+              <div class="person-dropdown-d-n">
+                <div class="header-person-dropdown__links">
+                  <a href="#" class="hpd__link">About Us</a>
+                  <a href="#" class="hpd__link">Category</a>
+                  <a href="#" class="hpd__link">Contact</a>
+                  <a href="#" class="hpd__link">Favorites</a>
+                  <a href="#" class="hpd__link">Goods</a>
+                  <a href="#" class="hpd__link">Korzinka</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="container">
+        <div class="home-wrapper">
+          <div class="hero-left">
+            <img src="/images/herofruits.png" alt="fruits">
+          </div>
+          <div class="hero-right">
+            <h1 class="hero-title">
+              Доставка бесплатно от 1000 ₽
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMOTION -->
+
+    <section class="promotion">
+      <div class="container">
+        <div class="promotion-wrapper">
+          <div class="promotion-top">
+            <h2 class="promotion-heading">Акции</h2>
+            <a href="./goods.html" class="promotion-top__link">Все продукты
+              <img src="./images/chevron-right.svg" alt="an img">
+            </a>
+          </div>
+          <div class="promotion-bottom">
+            <div class="promotion-card">
+              <div class="promotion-card__img">
+                <img class="goods-img-pr" src="./images/goodspro4.png" alt="an img">
+                <img src="/images/promotioncardlike.svg" alt="an img" class="prcardlike">
+                <p class="pcarddisc">-50%</p>
+              </div>
+              <div class="promotion-card__info">
+                <div class="promotion-card__info__price">
+                  <span class="p-c-i-span1">
+                    <p>44,50 ₽</p>
+                    <p>С картой</p>
+                  </span>
+                  <span class="p-c-i-span2">
+                    <p>50,50 ₽</p>
+                    <p>Обычная</p>
+                  </span>
+                </div>
+                <p class="promotion-card__info__text">
+                  Г/Ц Блинчики с мясом вес, Россия
+                </p>
+                <div class="promotion-card__info__rating">
+                  <img src="./images/starfill.svg" alt="an img">
+                  <img src="./images/starfill.svg" alt="an img">
+                  <img src="./images/starempty.svg" alt="an img">
+                  <img src="./images/starempty.svg" alt="an img">
+                  <img src="./images/starempty.svg" alt="an img">
+                </div>
+                <button class="promotion-card__info__button">
+                  <a href="./korzinka.html">В корзину</a>
+                </button>
+              </div>
+            </div>
+            <div class="promotion-card">
+              <div class="promotion-card__img">
+                <img class="goods-img-pr" src="./images/goodspro1.png" alt="an img">
+                <img src="/images/promotioncardlike.svg" alt="an img" class="prcardlike">
+                <p class="pcarddisc">-50%</p>
+              </div>
+              <div class="promotion-card__info">
+                <div class="promotion-card__info__price">
+                  <span class="p-c-i-span1">
+                    <p>44,50 ₽</p>
+                    <p>С картой</p>
+                  </span>
+                  <span class="p-c-i-span2">
+                    <p>50,50 ₽</p>
+                    <p>Обычная</p>
+                  </span>
+                </div>
+                <p class="promotion-card__info__text">
+                  Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...
+                </p>
+                <div class="promotion-card__info__rating">
+                  <img src="./images/starfill.svg" alt="an img">
+                  <img src="./images/starfill.svg" alt="an img">
+                  <img src="./images/starfill.svg" alt="an img">
+                  <img src="./images/starempty.svg" alt="an img">
+                  <img src="./images/starempty.svg" alt="an img">
+                </div>
+                <button class="promotion-card__info__button">
+                  <a href="./korzinka.html">В корзину</a>
+                </button>
+              </div>
+            </div>
+            <div class="promotion-card">
+              <div class="promotion-card__img">
+                <img class="goods-img-pr" src="./images/goodspro3.png" alt="an img">
+                <img src="/images/promotioncardlike.svg" alt="an img" class="prcardlike">
+                <p class="pcarddisc">-50%</p>
+              </div>
+              <div class="promotion-card__info">
+                <div class="promotion-card__info__price">
+                  <span class="p-c-i-span1">
+                    <p>44,50 ₽</p>
+                    <p>С картой</p>
+                  </span>
+                  <span class="p-c-i-span2">
+                    <p>50,50 ₽</p>
+                    <p>Обычная</p>
+                  </span>
+                </div>
+                <p class="promotion-card__info__text">
+                  Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
+                </p>
+                <div class="promotion-card__info__rating">
+                  <img src="./images/starfill.svg" alt="an img">
+                  <img src="./images/starfill.svg" alt="an img">
+                  <img src="./images/starfill.svg" alt="an img">
+                  <img src="./images/starfill.svg" alt="an img">
+                  <img src="./images/starfill.svg" alt="an img">
+                </div>
+                <button class="promotion-card__info__button">
+                  <a href="./korzinka.html">В корзину</a>
+                </button>
+              </div>
+            </div>
+            <div class="promotion-card">
+              <div class="promotion-card__img">
+                <img class="goods-img-pr" src="./images/goodspro2.png" alt="an img">
+                <img src="/images/promotioncardlike.svg" alt="an img" class="prcardlike">
+                <p class="pcarddisc">-50%</p>
+              </div>
+              <div class="promotion-card__info">
+                <div class="promotion-card__info__price">
+                  <span class="p-c-i-span1">
+                    <p>44,50 ₽</p>
+                    <p>С картой</p>
+                  </span>
+                  <span class="p-c-i-span2">
+                    <p>50,50 ₽</p>
+                    <p>Обычная</p>
+                  </span>
+                </div>
+                <p class="promotion-card__info__text">
+                  Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыро...
+                </p>
+                <div class="promotion-card__info__rating">
+                  <img src="./images/starfill.svg" alt="an img">
+                  <img src="./images/starfill.svg" alt="an img">
+                  <img src="./images/starfill.svg" alt="an img">
+                  <img src="./images/starfill.svg" alt="an img">
+                  <img src="./images/starhalfempty.svg" alt="an img">
+                </div>
+                <button class="promotion-card__info__button">
+                  <a href="./korzinka.html">В корзину</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+
+    <section class="news">
+      <div class="container">
+        <div class="news-wrapper">
+          <div class="news-top">
+            <h2 class="news-heading">Новинки</h2>
+            <a href="./goods.html" class="news-top__link">Все продукты
+              <img src="./images/chevron-right.svg" alt="an img">
+            </a>
+          </div>
+          <div class="news-bottom">
+            <div class="news-card">
+              <div class="news-card__img">
+                <img class="news-card__imgg" src="./images/newscardimg.png" alt="an img">
+                <img src="./images/promotioncardlike.svg" alt="an img" class="news-card__like">
+              </div>
+              <div class="news-card__info">
+                <p class="news-card__price">599,99 ₽</p>
+                <p class="news-card__text">
+                  Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
+                </p>
+                <div class="news-card__ratings">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                </div>
+                <button class="news-card__info__button">
+                  <a href="./korzinka.html">В корзину</a>
+                </button>
+              </div>
+            </div>
+            <div class="news-card">
+              <div class="news-card__img">
+                <img class="news-card__imgg" src="./images/goodspro3.png" alt="an img">
+                <img src="./images/promotioncardlike.svg" alt="an img" class="news-card__like">
+              </div>
+              <div class="news-card__info">
+                <p class="news-card__price">44,50 ₽</p>
+                <p class="news-card__text">
+                  Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
+                </p>
+                <div class="news-card__ratings">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starfill.svg" alt="star">
+                </div>
+                <button class="news-card__info__button">
+                  <a href="./korzinka.html">В корзину</a>
+                </button>
+              </div>
+            </div>
+            <div class="news-card">
+              <div class="news-card__img">
+                <img class="news-card__imgg" src="./images/goodspro2.png" alt="an img">
+                <img src="./images/promotioncardlike.svg" alt="an img" class="news-card__like">
+              </div>
+              <div class="news-card__info">
+                <p class="news-card__price">159,99 ₽</p>
+                <p class="news-card__text">
+                  Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
+                </p>
+                <div class="news-card__ratings">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                </div>
+                <button class="news-card__info__button">
+                  <a href="./korzinka.html">В корзину</a>
+                </button>
+              </div>
+            </div>
+            <div class="news-card">
+              <div class="news-card__img">
+                <img class="news-card__imgg" src="./images/goodspro1.png" alt="an img">
+                <img src="./images/promotioncardlike.svg" alt="an img" class="news-card__like">
+              </div>
+              <div class="news-card__info">
+                <p class="news-card__price">49,39 ₽</p>
+                <p class="news-card__text">
+                  Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
+                </p>
+                <div class="news-card__ratings">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                </div>
+                <button class="news-card__info__button">
+                  <a href="./korzinka.html">В корзину</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR -->
+
+    <section class="popular">
+      <div class="container">
+        <div class="popular-wrapper">
+          <div class="popular-top">
+            <h2 class="popular-heading">Покупали раньше</h2>
+            <a href="./goods.html" class="popular-top__link">Все продукты
+              <img src="./images/chevron-right.svg" alt="an img">
+            </a>
+          </div>
+          <div class="popular-bottom">
+            <div class="popular-card">
+              <div class="popular-card__img">
+                <img class="popular-card__imgg" src="./images/popularimg.png" alt="an img">
+                <img src="./images/promotioncardlike.svg" alt="an img" class="popular-card__like">
+              </div>
+              <div class="popular-card__info">
+                <p class="popular-card__price">77,99 ₽</p>
+                <p class="popular-card__text">
+                  Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
+                </p>
+                <div class="popular-card__ratings">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                </div>
+                <button class="popular-card__info__button">
+                  <a href="./korzinka.html">В корзину</a>
+                </button>
+              </div>
+            </div>
+            <div class="popular-card">
+              <div class="popular-card__img">
+                <img class="popular-card__imgg" src="./images/goodspro2.png" alt="an img">
+                <img src="./images/promotioncardlike.svg" alt="an img" class="popular-card__like">
+              </div>
+              <div class="popular-card__info">
+                <p class="popular-card__price">159,99 ₽</p>
+                <p class="popular-card__text">
+                  Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
+                </p>
+                <div class="popular-card__ratings">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                </div>
+                <button class="popular-card__info__button">
+                  <a href="./korzinka.html">В корзину</a>
+                </button>
+              </div>
+            </div>
+            <div class="popular-card">
+              <div class="popular-card__img">
+                <img class="popular-card__imgg" src="./images/newscardimg.png" alt="an img">
+                <img src="./images/promotioncardlike.svg" alt="an img" class="popular-card__like">
+              </div>
+              <div class="popular-card__info">
+                <p class="popular-card__price">599,99 ₽</p>
+                <p class="popular-card__text">
+                  Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
+                </p>
+                <div class="popular-card__ratings">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                </div>
+                <button class="popular-card__info__button">
+                  <a href="./korzinka.html">В корзину</a>
+                </button>
+              </div>
+            </div>
+            <div class="popular-card">
+              <div class="popular-card__img">
+                <img class="popular-card__imgg" src="./images/goodspro1.png" alt="an img">
+                <img src="./images/promotioncardlike.svg" alt="an img" class="popular-card__like">
+              </div>
+              <div class="popular-card__info">
+                <p class="popular-card__price">49,39 ₽</p>
+                <p class="popular-card__text">
+                  Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан...
+                </p>
+                <div class="popular-card__ratings">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starfill.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                  <img src="./images/starempty.svg" alt="star">
+                </div>
+                <button class="popular-card__info__button">
+                  <a href="./korzinka.html">В корзину</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIAL -->
+
+    <section class="special">
+      <div class="container">
+        <div class="special-wrapper">
+          <h2 class="special-top special-heading">Специальные предложения</h2>
+          <div class="special-bottom">
+            <div class="special-b__card1">
+              <div class="special-b__card1__content">
+                <h4 class="special-b__card1__content__title">
+                  Оформите карту «Северяночка»
+                </h4>
+                <p class="special-b__card1__content__text">
+                  И получайте бонусы при покупке в магазинах и на сайте
+                </p>
+              </div>
+              <div class="special-b__card1__img">
+                <img src="./images/soapimg.png" alt="an img">
+              </div>
+            </div>
+            <div class="special-b__card2">
+              <div class="special-b__card2__content">
+                <h4 class="special-b__card2__content__title">
+                  Покупайте акционные товары
+                </h4>
+                <p class="special-b__card2__content__text">
+                  И получайте вдвое больше бонусов
+                </p>
+              </div>
+              <div class="special-b__card2__img">
+                <img src="./images/basketimg.png" alt="an img">
+              </div>
+              <img class="spfloatimg1" src="./images/+.svg" alt="an img">
+              <img class="spfloatimg2" src="./images/+.svg" alt="an img">
+              <img class="spfloatimg4" src="./images/+.svg" alt="an img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAGAZINE -->
+
+    <section class="magazine">
+      <div class="container">
+        <div class="magazine-wrapper">
+          <div class="magazine-top">
+            <h2 class="magazine-title">
+              Наши магазины
+            </h2>
+          </div>
+          <div class="magazine-middle">
+            <button class="magazine-btn">
+              <div class="magazine-btn__link">п.Щельяюр</div>
+            </button>
+            <button class="magazine-btn">
+              <div class="magazine-btn__link">д.Вертеп</div>
+            </button>
+            <button class="magazine-btn">
+              <div class="magazine-btn__link">с.Краснобор</div>
+            </button>
+            <button class="magazine-btn">
+              <div class="magazine-btn__link">д.Диюр</div>
+            </button>
+          </div>
+          <div class="magazine-bottom">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47970.86187823606!2d69.17340082663333!3d41.2832114708281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ba578f4f58d%3A0xd7a2ecf23413b7a0!2sNajot%20Ta&#39;lim%20Chilonzor%20Filial!5e0!3m2!1sen!2s!4v1690646512425!5m2!1sen!2s"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLES -->
+
+    <section class="articles">
+      <div class="container">
+        <div class="articles-wrapper">
+          <div class="articles-top">
+            <h2 class="articles-heading">Статьи</h2>
+            <a href="./goods.html" class="articles-top__link">Все продукты
+              <img src="./images/chevron-right.svg" alt="an img">
+            </a>
+          </div>
+          <div class="articles-bottom">
+            <div class="articles-card">
+              <div class="articles-card__imgbox">
+                <img src="./images/articlescardimg3.png" alt="an img">
+              </div>
+              <div class="articles-card__infos">
+                <p class="articles-card__subtext">
+                  05.03.2021
+                </p>
+                <h4 class="articles-card__title">
+                  Режим использования масок и перчаток на территории магазинов
+                </h4>
+                <p class="articles-card__text">
+                  Подробная информация о режимах использования масок и перчаток на территории магазинов "ЛЕНТА".
+                  Информация обновляется
+                  каждый будний день.
+                </p>
+                <button class="articles-card__btn">
+                  <a href="./contact.html">Подробнее</a>
+                </button>
+              </div>
+            </div>
+            <div class="articles-card">
+              <div class="articles-card__imgbox">
+                <img src="./images/articlescardimg2.png" alt="an img">
+              </div>
+              <div class="articles-card__infos">
+                <p class="articles-card__subtext">
+                  05.03.2021
+                </p>
+                <h4 class="articles-card__title">
+                  Весеннее настроение для каждой
+                </h4>
+                <p class="articles-card__text">
+                  8 Марта – это не просто Международный женский день, это ещё день тюльпанов, приятных сюрпризов и
+                  праздничных тёплых
+                  пожеланий.
+                </p>
+                <button class="articles-card__btn">
+                  <a href="./contact.html">Подробнее</a>
+                </button>
+              </div>
+            </div>
+            <div class="articles-card">
+              <div class="articles-card__imgbox">
+                <img src="./images/articlescardimg1.png" alt="an img">
+              </div>
+              <div class="articles-card__infos">
+                <p class="articles-card__subtext">
+                  22.02.2020
+                </p>
+                <h4 class="articles-card__title">
+                  ЗОЖ или ФАСТФУД. А вы на чьей стороне? Голосуем!
+                </h4>
+                <p class="articles-card__text">
+                  Голосуйте за любимые категории, выбирайте категорию-победителя в мобильном приложении и получайте
+                  кешбэк 10% баллами в
+                  апреле!
+                </p>
+                <button class="articles-card__btn">
+                  <a href="./contact.html">Подробнее</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER AS SECTION -->
+
+    <section class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-top">
+            <div class="footer-logo">
+              <img src="./images/footerlogoofec.png" alt="an img">
+            </div>
+            <div class="footer-nav">
+              <ul>
+                <li><a href="./about.html">О компании </a></li>
+                <li><a href="./contact.html">Контакты</a></li>
+                <li><a href="./category.html">Вакансии</a></li>
+                <li><a href="./favorites.html">Статьи</a></li>
+                <li><a href="./category.html">Политика обработки персональных данных</a></li>
+              </ul>
+            </div>
+            <div class="footer-social">
+              <a href="https://www.instagram.com/_tycoonme/" class="instagram">
+                <img src="./images/instagram.svg" alt="a logo">
+              </a>
+              <a href="https://t.me/tycoon_me"><img src="./images/vkontakte.svg" alt="an img"></a>
+              <a href="https://t.me/tycoon_me"><img src="./images/facebook.svg" alt="an img"></a>
+              <a href="https://t.me/tycoon_me"><img src="./images/ok.svg" alt="an img"></a>
+            </div>
+            <div class="footer-end">
+              <img src="./images/phone.svg" alt="an img">
+              <p>8 800 777 33 33</p>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>Дизайн</p>
+            <img src="./images/logo-zasovskiy-small-black.svg" alt="an img">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="menu">
+    <div class="container">
+      <div class="menu-wrapper">
+        <ul>
+          <li>
+            <img src="./images/footerburger.svg" alt="an img">
+            <a href="./category.html">Каталог</a>
+          </li>
+          <li>
+            <img src="./images/header-linksimg2.svg" alt="">
+            <a href="./favorites.html">Избранное</a>
+          </li>
+          <li>
+            <img src="./images/header-linksimg1.svg" alt="an img">
+            <a href="./goods.html">Заказы</a>
+          </li>
+          <li>
+            <img src="./images/shopping-cart.svg" alt="an img">
+            <a href="./korzinka.html">Корзина</a>
+          </li>
+        </ul>
+        <div class="menu-avatar">
+          <img src="./images/personavater.png" alt="an img">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
