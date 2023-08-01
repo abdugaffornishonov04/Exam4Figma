@@ -1,2 +1,23 @@
 @use "./pages/home";
 @use "./base/typography";
+@use "./pages/about";
+@use "./pages/contact";
+@use "./pages/vacancy";
+
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #FBF8EC;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
