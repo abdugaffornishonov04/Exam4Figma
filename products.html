@@ -4,8 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Favorites</title>
+  <title>Products</title>
   <link rel="stylesheet" href="./css/main.css">
+
+  <style>
+    section{
+      margin-top: 120px;
+    }
+    .pr-row{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+    }
+  </style>
 </head>
 
 <body>
@@ -63,7 +73,7 @@
                 <img src="/images/shopping-cart.svg" alt="an img">
                 <img class="header-shopping__number" src="/images/shoppingnum.svg" alt="an img">
                 <a href="./korzinka.html" class="header-links">Корзина</a>
-  
+
               </div>
             </li>
           </ul>
@@ -72,7 +82,7 @@
             <p class="header-person__name">Алексей</p>
             <div class="header-person__dropdown">
               <img src="/images/chevron-down.svg" alt="an img">
-  
+
               <div class="person-dropdown-d-n">
                 <div class="header-person-dropdown__links">
                   <a href="#" class="hpd__link">About Us</a>
@@ -89,6 +99,15 @@
       </div>
     </div>
   </header>
-</body>
 
+  <main>
+    <section>
+      <div class="container">
+      <div class="pr-row"></div>
+      </div>
+    </section>
+  </main>
+</body>
+<!-- <script src="js/products-data.js"></script> -->
+<script src="js/product.js"></script>
 </html>
