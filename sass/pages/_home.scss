@@ -387,7 +387,7 @@ body {
   position: relative;
 }
 
-.c-d-d-wrapper-d-b{
+.c-d-d-wrapper-d-b {
   display: block !important;
 }
 
@@ -1124,7 +1124,9 @@ body {
             line-height: 150%;
           }
 
+
           .popular-card__text {
+            height: 75px;
             color: var(--main-on-surface, #414141);
             font-family: 'Rubik';
             font-size: 16px;
@@ -1223,6 +1225,10 @@ body {
         border-radius: 4px;
         background: var(--main-primary-muted, #FCD5BA);
         box-shadow: 0px 8px 16px 0px rgba(202, 147, 96, 0.50);
+
+        &:hover {
+          background-color: #E5FFDE;
+        }
 
         @media(max-width:1180px) {
           width: 450px;
@@ -1390,55 +1396,24 @@ body {
       }
     }
 
-    .magazine-middle {
+    .magazine-ap-tab {
       display: flex;
-      margin-bottom: 24px;
-      gap: 24px;
+      flex-direction: column;
 
-      @media (max-width:500px) {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-      }
-
-      @media (max-width:325px) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-      }
-
-      @media (max-width:250px) {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 6px;
-      }
-
-      .magazine-btn {
+      .magazine-ap-tab-btns {
+        margin-bottom: 24px;
         display: flex;
-        height: 32px;
-        padding: 18px;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        border: none;
-        border-radius: 4px;
-        background: var(--grayscale-lightest, #F3F2F1);
-        transition: 0.5s;
+        gap: 24px;
 
-        @media (max-width:500px) {
+        .m-a-p-btn {
+          height: 32px;
           padding: 8px;
-        }
-
-        &:hover {
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          border: none;
           border-radius: 4px;
-          background: var(--main-secondary, #70C05B);
-
-          .magazine-btn__link {
-            color: #fff;
-          }
-        }
-
-        .magazine-btn__link {
+          background: var(--grayscale-lightest, #F3F2F1);
           color: var(--grayscale-hardest, #606060);
           text-align: center;
           font-family: 'Rubik';
@@ -1446,13 +1421,18 @@ body {
           font-style: normal;
           font-weight: 400;
           line-height: 150%;
+          cursor: pointer;
         }
       }
-    }
 
-    .magazine-bottom {
-      iframe {
-        width: 100%;
+      .magazine-ap-tab-contents{
+        .magazine-ap-tab-content{
+          width: 100%;
+
+          iframe{
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -1923,3 +1903,12 @@ body {
     }
   }
 }
+
+////js-used elements 
+
+.active-tab {
+  color: #fff !important;
+  border-radius: 4px;
+  background-color:#70C05B !important;
+}
+

@@ -575,5 +575,3 @@ const products = [
     ],
   },
 ];
-
-
