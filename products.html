@@ -6,19 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products</title>
   <link rel="stylesheet" href="./css/main.css">
-
-  <style>
-    section{
-      margin-top: 120px;
-    }
-    .pr-row{
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-    }
-  </style>
+  <link rel="icon" type="image/png" href="./images/res-logo-768.svg">
 </head>
 
+
 <body>
+
+  <!-- HEADER -->
+
   <header class="header">
     <div class="container">
       <div class="header-wrapper">
@@ -36,20 +31,16 @@
               <img class="category-dropdown-btn" src="./images/headermenu.svg" alt="an img">
               <div class="c-d-d-wrapper">
                 <div class="c-d-d-main ">
-                  <a href="#" class="c-d-d-main-a">Молоко, сыр, яйцо</a>
-                  <a href="#" class="c-d-d-main-a">Хлеб</a>
-                  <a href="#" class="c-d-d-main-a">Фрукты и овощи</a>
-                  <a href="#" class="c-d-d-main-a">Замороженные продукты</a>
-                  <a href="#" class="c-d-d-main-a">Напитки</a>
-                  <a href="#" class="c-d-d-main-a">Кондитерские изделия</a>
-                  <a href="#" class="c-d-d-main-a">Чай, кофе</a>
-                  <a href="#" class="c-d-d-main-a">Бакалея</a>
-                  <a href="#" class="c-d-d-main-a">Здоровое питание</a>
-                  <a href="#" class="c-d-d-main-a">Зоотовары</a>
-                  <a href="#" class="c-d-d-main-a">Непродовольственные товары</a>
-                  <a href="#" class="c-d-d-main-a">Детское питание</a>
-                  <a href="#" class="c-d-d-main-a">Мясо, птица, колбаса</a>
-                  <a href="#" class="c-d-d-main-a">Замороженные продукты</a>
+                  <a href="#" class="c-d-d-main-a">Fruit</a>
+                  <a href="#" class="c-d-d-main-a">Bakery</a>
+                  <a href="#" class="c-d-d-main-a">Vegetable</a>
+                  <a href="#" class="c-d-d-main-a">Dairy</a>
+                  <a href="#" class="c-d-d-main-a">Meat</a>
+                  <a href="#" class="c-d-d-main-a">Dessert</a>
+                  <a href="#" class="c-d-d-main-a">Fast Food</a>
+                  <a href="#" class="c-d-d-main-a">Breakfast</a>
+                  <a href="#" class="c-d-d-main-a">Lunch</a>
+                  <a href="#" class="c-d-d-main-a">Dinner</a>
                 </div>
               </div>
             </a>
@@ -66,14 +57,14 @@
             </li>
             <li class="header-links__items">
               <img src="/images/header-linksimg1.svg" alt="an img">
-              <a href="./goods.html" class="header-links">продукты</a>
+              <a href="./products.html" class="header-links">продукты</a>
             </li>
             <li class="header-links__items">
               <div class="header-shopping">
                 <img src="/images/shopping-cart.svg" alt="an img">
                 <img class="header-shopping__number" src="/images/shoppingnum.svg" alt="an img">
                 <a href="./korzinka.html" class="header-links">Корзина</a>
-
+  
               </div>
             </li>
           </ul>
@@ -82,7 +73,7 @@
             <p class="header-person__name">Алексей</p>
             <div class="header-person__dropdown">
               <img src="/images/chevron-down.svg" alt="an img">
-
+  
               <div class="person-dropdown-d-n">
                 <div class="header-person-dropdown__links">
                   <a href="#" class="hpd__link">About Us</a>
@@ -101,13 +92,23 @@
   </header>
 
   <main>
-    <section>
-      <div class="container">
-      <div class="pr-row"></div>
+    <section class="pr-hero">
+      <div class="container pr-hero-container">
+        <div class="pr-top">
+          <h1>Все продукты</h1>
+        </div>
+        <div class="pr-search">
+          <input class="pr-search-input" type="text" placeholder="Search products...">
+        </div>
+        <div class="pr-row">
+
+        </div>
       </div>
     </section>
   </main>
 </body>
-<!-- <script src="js/products-data.js"></script> -->
+<script src="js/products-data.js"></script>
 <script src="js/product.js"></script>
+<script src="./js/main.js"></script>
+
 </html>

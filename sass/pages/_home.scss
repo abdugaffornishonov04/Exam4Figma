@@ -1405,6 +1405,11 @@ body {
         display: flex;
         gap: 24px;
 
+        @media (max-width:450px) {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
         .m-a-p-btn {
           height: 32px;
           padding: 8px;
@@ -1425,11 +1430,11 @@ body {
         }
       }
 
-      .magazine-ap-tab-contents{
-        .magazine-ap-tab-content{
+      .magazine-ap-tab-contents {
+        .magazine-ap-tab-content {
           width: 100%;
 
-          iframe{
+          iframe {
             width: 100%;
           }
         }
@@ -1909,6 +1914,5 @@ body {
 .active-tab {
   color: #fff !important;
   border-radius: 4px;
-  background-color:#70C05B !important;
+  background-color: #70C05B !important;
 }
-
