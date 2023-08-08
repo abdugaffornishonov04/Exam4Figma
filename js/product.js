@@ -1,6 +1,8 @@
 const prMainRow = document.querySelector(".pr-row");
 const prSearchInput = document.querySelector(".pr-search-input");
 
+let search = "";
+
 function mainProductGetter(product){
   const prMainCard = document.createElement( "div" );
   prMainCard.className = "popular-card";
@@ -65,13 +67,32 @@ function mainProductGetter(product){
   return prMainCard;
 }
 
-  
+  // function getPrProducts(){
+  //   let result = products.filter((pr) => pr.name.toLowerCase().includes(search));
+  //   prMainRow.innerHTML = "";
+
+  //   if(result.length !== 0){
+  //     result.map((pr) => {
+  //       let card = mainProductGetter(pr);
+  //       prMainRow.append(card);
+  //     }) 
+  //   } else{
+  //     prMainRow.innerHTML = `No Products Found`
+  //   }
+  // }
+
+  // mainProductGetter()
+
+  // prSearchInput.addEventListener("keyup",function (){
+  //   search = this.value.trim().toLowerCase();
+  //   mainProductGetter()
+  // })
 
 
-  products.map( ( product ) => {
-    let card = mainProductGetter( product );
-    prMainRow.append( card );
-  } ); 
+    products.map( ( product ) => {
+      let card = mainProductGetter( product );
+      prMainRow.append( card );
+    } ); 
 
  
 
