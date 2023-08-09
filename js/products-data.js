@@ -576,8 +576,6 @@ const products = [
   },
 ];
 
-for(el of products){
-  console.log(el.category);
-}
+
 
 

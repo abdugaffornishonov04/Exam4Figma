@@ -2,7 +2,7 @@
 
 const pMainRow = document.querySelector( ".promotion-bottom" );
 
-function getCardsAksii( product ) {
+function getCardsAksii( {id,name,category,description,price,rating,discount,images} ) {
 
   const pMainCard = document.createElement( "div" );
   pMainCard.className = "promotion-card";
@@ -10,15 +10,15 @@ function getCardsAksii( product ) {
   const pMainCardImgBox = document.createElement( "div" );
   pMainCardImgBox.className = "promotion-card__img";
   const pMainCardImgBoxImg = document.createElement( "img" );
-  pMainCardImgBoxImg.src = product.images[ 0 ];
-  pMainCardImgBoxImg.alt = product.name;
+  pMainCardImgBoxImg.src = images[ 0 ];
+  pMainCardImgBoxImg.alt = name;
   pMainCardImgBoxImg.className = "goods-img-pr";
   const pMainCardImgBoxImgLike = document.createElement( "img" );
   pMainCardImgBoxImgLike.src = "/images/promotioncardlike.svg";
   pMainCardImgBoxImgLike.alt = "Like";
   pMainCardImgBoxImgLike.className = "prcardlike";
   const pMainCardImgBoxP = document.createElement( "p" );
-  pMainCardImgBoxP.innerHTML = `${product.discount}%  `;
+  pMainCardImgBoxP.innerHTML = `${discount}%  `;
   pMainCardImgBoxP.className = "pcarddisc";
   pMainCardImgBox.append( pMainCardImgBoxImg, pMainCardImgBoxImgLike, pMainCardImgBoxP );
 
@@ -30,7 +30,7 @@ function getCardsAksii( product ) {
   const pMainCardInfoPriceSpan1 = document.createElement( "span" );
   pMainCardInfoPriceSpan1.className = "p-c-i-span1";
   const pMainCardInfoPriceSpan1P1 = document.createElement( "p" );
-  pMainCardInfoPriceSpan1P1.innerHTML = `${product.price}₽`;
+  pMainCardInfoPriceSpan1P1.innerHTML = `${price}₽`;
   const pMainCardInfoPriceSpan1P2 = document.createElement( "p" );
   pMainCardInfoPriceSpan1P2.innerHTML = "С картой";
   const pMainCardInfoPriceSpan2 = document.createElement( "span" );
@@ -42,7 +42,7 @@ function getCardsAksii( product ) {
 
   const pMainCardInfoText = document.createElement( "p" );
   pMainCardInfoText.className = "promotion-card__info__text";
-  pMainCardInfoText.innerHTML = `${product.description}`;
+  pMainCardInfoText.innerHTML = `${description}`;
 
   const pMainCardInfoRating = document.createElement( "div" );
   pMainCardInfoRating.className = "promotion-card__info__rating";
@@ -69,8 +69,10 @@ function getCardsAksii( product ) {
 
   const pMainCardInfoBtn = document.createElement( "button" );
   pMainCardInfoBtn.className = "promotion-card__info__button";
+  pMainCardInfoBtn.onclick = function () {
+    addToCart( id );
+  };
   const pMainCardInfoBtnA = document.createElement( "a" );
-  pMainCardInfoBtnA.href = "./korzinka.html";
   pMainCardInfoBtnA.innerHTML = "В корзину";
   pMainCardInfoBtn.append( pMainCardInfoBtnA );
 
@@ -101,15 +103,16 @@ pHomeMain.map( ( product ) => {
 
 const novinkiiMainRow = document.querySelector( ".news-bottom" );
 
-function getCardsNovinki( product ) {
+
+function getCardsNovinki({ id, name, category, description, price, rating, discount, images} ) {
   const nMainCard = document.createElement( "div" );
   nMainCard.className = "news-card";
 
   const nMainCardImgBox = document.createElement( "div" );
   nMainCardImgBox.className = "news-card__img";
   const nMainCardImgBoxImg = document.createElement( "img" );
-  nMainCardImgBoxImg.src = product.images[ 0 ];
-  nMainCardImgBoxImg.alt = product.name;
+  nMainCardImgBoxImg.src = images[ 0 ];
+  nMainCardImgBoxImg.alt = name;
   nMainCardImgBoxImg.className = "news-card__imgg";
   const nMainCardImgBoxImgLike = document.createElement( "img" );
   nMainCardImgBoxImgLike.src = "./images/promotioncardlike.svg";
@@ -121,10 +124,10 @@ function getCardsNovinki( product ) {
   nMainCardInfo.className = "news-card__info";
   const nMainCardInfoFirstP = document.createElement( "p" );
   nMainCardInfoFirstP.className = "news-card__price";
-  nMainCardInfoFirstP.innerHTML = `${product.price} ₽`
+  nMainCardInfoFirstP.innerHTML = `${price} ₽`
   const nMainCardSecondP = document.createElement( "p" );
   nMainCardSecondP.className = "news-card__text";
-  nMainCardSecondP.innerHTML = `${product.description}`;
+  nMainCardSecondP.innerHTML = `${description}`;
   const nMainCardRatings = document.createElement( "div" );
   nMainCardRatings.className = "news-card__ratings";
   const nMainCardInfoRatingImg1 = document.createElement( "img" );
@@ -150,8 +153,10 @@ function getCardsNovinki( product ) {
 
   const nMainCardButton = document.createElement( "div" );
   nMainCardButton.className = "news-card__info__button";
+  nMainCardButton.onclick = function () {
+    addToCart( id );
+  };
   const nMainCardButtonLink = document.createElement( "a" );
-  nMainCardButtonLink.href = "./korzinka.html";
   nMainCardButtonLink.innerHTML = "В корзину";
   nMainCardButton.append( nMainCardButtonLink );
 
@@ -177,15 +182,17 @@ novinkiiCards.map( ( product ) => {
 
 const popMainRow = document.querySelector( ".popular-bottom" )
 
-function getCardsPopular( product ) {
+
+
+function getCardsPopular( {id, name, category, description, price, rating, discount, images} ) {
   const popMainCard = document.createElement( "div" );
   popMainCard.className = "popular-card";
 
   const popMainCardImgBox = document.createElement( "div" );
   popMainCardImgBox.className = "popular-card__img";
   const popMainCardImgBoxImg = document.createElement( "img" );
-  popMainCardImgBoxImg.src = product.images[ 0 ];
-  popMainCardImgBoxImg.alt = product.name;
+  popMainCardImgBoxImg.src = images[ 0 ];
+  popMainCardImgBoxImg.alt = name;
   popMainCardImgBoxImg.className = "popular-card__imgg";
   const popMainCardImgBoxLike = document.createElement( "img" );
   popMainCardImgBoxLike.src = "./images/promotioncardlike.svg";
@@ -197,10 +204,10 @@ function getCardsPopular( product ) {
   popMainCardInfo.className = "popular-card__info";
   const popMainCardInfoFirstP = document.createElement( "p" );
   popMainCardInfoFirstP.className = "popular-card__price";
-  popMainCardInfoFirstP.innerHTML = `${product.price} ₽`
+  popMainCardInfoFirstP.innerHTML = `${price} ₽`
   const popMainCardInfoSecondP = document.createElement( "p" );
   popMainCardInfoSecondP.className = "popular-card__text";
-  popMainCardInfoSecondP.innerHTML = `${product.description}`;
+  popMainCardInfoSecondP.innerHTML = `${description}`;
   const popMainCardRatings = document.createElement( "div" );
   popMainCardRatings.className = "popular-card__ratings";
   const popMainCardInfoRatingsImg1 = document.createElement( "img" );
@@ -226,8 +233,10 @@ function getCardsPopular( product ) {
 
   const popMainCardButton = document.createElement( "div" );
   popMainCardButton.className = "popular-card__info__button";
+  popMainCardButton.onclick = function () {
+    addToCart( id );
+  };
   const popMainCardButtonLink = document.createElement( "a" );
-  popMainCardButtonLink.href = "./korzinka.html";
   popMainCardButtonLink.innerHTML = "В корзину";
   popMainCardButton.append( popMainCardButtonLink );
 
@@ -412,6 +421,34 @@ articlesArray.map((el) => {
   let card = articlCardGetter(el);
   arMainRow.append(card);
 })
+
+
+
+////cart
+
+const prAdCartBtn = document.querySelector( ".promotion-card__info__button" );
+const nwAdCartBtn = document.querySelector( ".news-card__info__button" );
+const popAdCartBtn = document.querySelector( ".popular-card__info__button" );
+
+function addToCart(id){
+  let product = products.find((pr) => pr.id === id);
+  let check = cart.find((pr) => pr.id === id)
+
+  if(check){
+    cart = cart.map((pr) => {
+      if(pr.id === id ){
+        pr.quantity++
+      }
+      return pr;
+    })
+  }else{
+    product.quantity = 1;
+    cart.push(product)
+  }
+  localStorage.setItem("cart", JSON.stringify(cart))
+  getCardTotal()
+}
+
 
 
 

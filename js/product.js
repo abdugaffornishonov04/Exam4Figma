@@ -4,6 +4,9 @@ const prSearchInput = document.querySelector(".pr-search-input");
 let search = "";
 
 function mainProductGetter(product){
+
+let check = cart.find((pr) => pr.id === product.id)
+
   const prMainCard = document.createElement( "div" );
   prMainCard.className = "popular-card";
 
@@ -52,10 +55,13 @@ function mainProductGetter(product){
 
   const prMainCardButton = document.createElement( "div" );
   prMainCardButton.className = "popular-card__info__button";
+  prMainCardButton.className = check ? "active-card" : "popular-card__info__button";
   const prMainCardButtonLink = document.createElement( "a" );
-  prMainCardButtonLink.href = "./korzinka.html";
+  // prMainCardButtonLink.href = "./korzinka.html";
   prMainCardButtonLink.innerHTML = "В корзину";
   prMainCardButton.append( prMainCardButtonLink );
+
+  prMainCardButton.addEventListener("click",() => addToCart(product.id))
 
   prMainCardInfo.append( prMainCardInfoFirstP,
     prMainCardInfoSecondP,
@@ -67,91 +73,31 @@ function mainProductGetter(product){
   return prMainCard;
 }
 
-  // function getPrProducts(){
-  //   let result = products.filter((pr) => pr.name.toLowerCase().includes(search));
-  //   prMainRow.innerHTML = "";
+function addToCart( id ) {
+  let product = products.find( ( pr ) => pr.id === id );
+  let check = cart.find( ( pr ) => pr.id === id )
 
-  //   if(result.length !== 0){
-  //     result.map((pr) => {
-  //       let card = mainProductGetter(pr);
-  //       prMainRow.append(card);
-  //     }) 
-  //   } else{
-  //     prMainRow.innerHTML = `No Products Found`
-  //   }
-  // }
-
-  // mainProductGetter()
-
-  // prSearchInput.addEventListener("keyup",function (){
-  //   search = this.value.trim().toLowerCase();
-  //   mainProductGetter()
-  // })
-
+  if ( check ) {
+    cart = cart.map( ( pr ) => {
+      if ( pr.id === id ) {
+        pr.quantity++
+      }
+      return pr;
+    } )
+  } else {
+    product.quantity = 1;
+    cart.push( product )
+  }
+  localStorage.setItem( "cart", JSON.stringify( cart ) )
+  getCardTotal()
+}
 
     products.map( ( product ) => {
       let card = mainProductGetter( product );
       prMainRow.append( card );
     } ); 
 
- 
 
-
- 
-
-// const productsRow = document.querySelector( ".pr-row" );
-// const searchInput = document.querySelector( ".pr-search-input" );
-// const totalProducts = document.querySelector( ".total-products" );
-
-// let search = "";
-
-// function getProductCard( pr ) {
-//   return `
-//     <div class="product-card">
-//       <div class="product-card-body">
-//         <img
-//           src="${pr.images[ 0 ]}"
-//           alt="${pr.name}"
-//         />
-//       </div>
-//       <div class="product-card-footer">
-//         <h3><a href="product.html">${pr.name}</a></h3>
-//         <p> ${pr.description} </p>
-//         <p><i> ${pr.price} </i></p>
-//         <button><b> Add to the cart </b></button>
-//       </div>
-//     </div>
-//   `;
-// }
-
-// function getProducts() {
-//   let results = products.filter(
-//     ( pr ) =>
-//       pr.name.toLowerCase().includes( search ) ||
-//       pr.description.toLowerCase().includes( search )
-//   );
-
-//   totalProducts.textContent = results.length;
-
-//   productsRow.innerHTML = "";
-
-//   if ( results.length !== 0 ) {
-//     results.map( ( pr ) => {
-//       productsRow.innerHTML += getProductCard( pr );
-//     } );
-//   } else {
-//     productsRow.innerHTML = `<div>
-//       No products
-//     </div>`;
-//   }
-// }
-
-// getProducts();
-
-// searchInput.addEventListener( "keyup", function () {
-//   search = this.value.trim().toLowerCase();
-//   getProducts();
-// } );
 
 
 

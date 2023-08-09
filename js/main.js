@@ -29,3 +29,28 @@ function dDownActivate() {
 }
 cDropBtn.addEventListener( "click", dDownActivate );
 ////btn-click-list end
+
+
+
+////
+
+let cartJson = localStorage.getItem("cart");
+
+
+let cart = JSON.parse(cartJson) || [];
+
+console.log(cart);
+const headerShopNum = document.querySelector( ".header-shopping__number" );
+
+function getCardTotal(){
+  headerShopNum.innerHTML = `${cart.length}`;
+}
+
+
+let cartPusher;
+
+getCardTotal()
+
+
+
+
