@@ -2071,3 +2071,19 @@ body {
     }
   }
 }
+
+.header-links__items{
+  &:first-child{
+    position: relative;
+    .header-like__number {
+        position: absolute;
+        right: 5px;
+        top: -17px;
+        width: 20px;
+        border-radius: 10px;
+        background-color: #F63;
+        color: #fff !important;
+      }
+  }
+}
+

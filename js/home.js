@@ -17,6 +17,9 @@ function getCardsAksii( {id,name,category,description,price,rating,discount,imag
   pMainCardImgBoxImgLike.src = "/images/promotioncardlike.svg";
   pMainCardImgBoxImgLike.alt = "Like";
   pMainCardImgBoxImgLike.className = "prcardlike";
+  pMainCardImgBoxImgLike.onclick = function () {
+    addToLike( id );
+  };
   const pMainCardImgBoxP = document.createElement( "p" );
   pMainCardImgBoxP.innerHTML = `${discount}%  `;
   pMainCardImgBoxP.className = "pcarddisc";
@@ -448,6 +451,35 @@ function addToCart(id){
   localStorage.setItem("cart", JSON.stringify(cart))
   getCardTotal()
 }
+
+
+
+/////like
+
+const prAdCartLike = document.querySelector( ".prcardlike" );
+const nwAdCartLike = document.querySelector( ".news-card__info__button" );
+const popAdCartLike = document.querySelector( ".popular-card__info__button" );
+
+function addToLike( id ) {
+  let product = products.find( ( pr ) => pr.id === id );
+  let check = like.find( ( pr ) => pr.id === id )
+
+  if ( check ) {
+    like = like.map( ( pr ) => {
+      if ( pr.id === id ) {
+        pr.quantity++
+      }
+      return pr;
+    } )
+  } else {
+    product.quantity = 1;
+    like.push( product )
+  }
+  localStorage.setItem( "like", JSON.stringify( like ) )
+  getLikeTotal()
+}
+
+
 
 
 

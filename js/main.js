@@ -32,7 +32,7 @@ cDropBtn.addEventListener( "click", dDownActivate );
 
 
 
-////
+////cart
 
 let cartJson = localStorage.getItem("cart");
 
@@ -50,6 +50,34 @@ function getCardTotal(){
 let cartPusher;
 
 getCardTotal()
+
+
+// /like
+
+let likeJson = localStorage.getItem( "like" );
+
+
+let like = JSON.parse( likeJson ) || [];
+
+console.log( like );
+const headerLikeNum = document.querySelector(".header-like__number")
+
+function getLikeTotal() {
+  headerLikeNum.innerHTML = `${like.length}`;
+}
+
+
+let likePusher;
+
+getLikeTotal()
+
+
+
+
+
+
+
+
 
 
 

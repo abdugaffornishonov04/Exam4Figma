@@ -1,11 +1,19 @@
-const prMainRow = document.querySelector(".pr-row");
-const prSearchInput = document.querySelector(".pr-search-input");
+const prMainRow = document.querySelector( ".pr-row" );
+const prSearchInput = document.querySelector( ".pr-search-input" );
 
 let search = "";
 
-function mainProductGetter(product){
+prSearchInput.addEventListener("keydown", (e) => {
+  let searchProducts = products.filter( el => el.name.includes( e.target.value ) || el.description.includes( e.target.value ) )
+  prMainRow.innerHTML = null
+  renderCards(searchProducts)
+})
 
-let check = cart.find((pr) => pr.id === product.id)
+function mainProductGetter( product ) {
+  
+  cart = JSON.parse( localStorage.getItem( "cart" ) )
+  let check = cart.find( ( pr ) => pr.id === product.id )
+  let likeCheck = like.find( ( pr ) => pr.id === product.id )
 
   const prMainCard = document.createElement( "div" );
   prMainCard.className = "popular-card";
@@ -18,6 +26,9 @@ let check = cart.find((pr) => pr.id === product.id)
   prMainCardImgBoxImg.className = "popular-card__imgg";
   const prMainCardImgBoxLike = document.createElement( "img" );
   prMainCardImgBoxLike.src = "./images/promotioncardlike.svg";
+  prMainCardImgBoxLike.addEventListener( "click", () => addToLike( product.id ) )
+  prMainCardImgBoxLike.className = likeCheck ? "active-like" : "pr-card-like";
+
   prMainCardImgBoxLike.alt = "Like";
   prMainCardImgBoxLike.className = "pr-card-like";
   prMainCardImgBox.append( prMainCardImgBoxImg, prMainCardImgBoxLike );
@@ -54,14 +65,18 @@ let check = cart.find((pr) => pr.id === product.id)
     prMainCardInfoRatingsImg5 );
 
   const prMainCardButton = document.createElement( "div" );
-  prMainCardButton.className = "popular-card__info__button";
+  // prMainCardButton.className = "popular-card__info__button";
   prMainCardButton.className = check ? "active-card" : "popular-card__info__button";
   const prMainCardButtonLink = document.createElement( "a" );
   // prMainCardButtonLink.href = "./korzinka.html";
   prMainCardButtonLink.innerHTML = "В корзину";
   prMainCardButton.append( prMainCardButtonLink );
 
-  prMainCardButton.addEventListener("click",() => addToCart(product.id))
+  prMainCardButton.addEventListener( "click", () => {
+    addToCart( product.id )
+    prMainRow.innerHTML = null
+    renderCards(products)
+  } )
 
   prMainCardInfo.append( prMainCardInfoFirstP,
     prMainCardInfoSecondP,
@@ -69,7 +84,7 @@ let check = cart.find((pr) => pr.id === product.id)
     prMainCardButton );
 
   prMainCard.append( prMainCardImgBox, prMainCardInfo );
-  
+
   return prMainCard;
 }
 
@@ -90,12 +105,45 @@ function addToCart( id ) {
   }
   localStorage.setItem( "cart", JSON.stringify( cart ) )
   getCardTotal()
+  // mainProductGetter(product)
 }
 
-    products.map( ( product ) => {
-      let card = mainProductGetter( product );
-      prMainRow.append( card );
-    } ); 
+function renderCards(products){
+  products.map( ( product ) => {
+    let card = mainProductGetter( product );
+    prMainRow.append( card );
+  } );
+
+}
+
+renderCards( products )
+
+
+/////like
+
+const prAdCartLike = document.querySelector( ".pr-card-like" );
+const nwAdCartLike = document.querySelector( ".news-card__info__button" );
+const popAdCartLike = document.querySelector( ".popular-card__info__button" );
+
+function addToLike( id ) {
+  let product = products.find( ( pr ) => pr.id === id );
+  let check = like.find( ( pr ) => pr.id === id )
+
+  if ( check ) {
+    like = like.map( ( pr ) => {
+      if ( pr.id === id ) {
+        pr.quantity++
+      }
+      return pr;
+    } )
+  } else {
+    product.quantity = 1;
+    like.push( product )
+  }
+  localStorage.setItem( "like", JSON.stringify( like ) )
+  getLikeTotal()
+}
+
 
 
 
